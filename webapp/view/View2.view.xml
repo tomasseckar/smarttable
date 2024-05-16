@@ -12,8 +12,17 @@
                         <smartfield:SmartField id="idnsbjField" textLabel="Id subjektu" value="{Idnsbj}"></smartfield:SmartField>
                     </smartform:GroupElement>
                     <smartform:GroupElement id="groupElement2">
-                        <smartfield:SmartField id="jmnosbField" textLabel="Jméno osoby" value="{Jmnosb}"></smartfield:SmartField>
-                    </smartform:GroupElement>                    
+                        <smartfield:SmartField id="vrzsbjField" textLabel="Verze subjektu" value="{Vrzsbj}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElement3">
+                        <smartfield:SmartField id="jmnosbField" textLabel="Jméno" value="{Jmnosb}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElement4">
+                        <smartfield:SmartField id="prjosbField" textLabel="Příjmení" value="{Prjosb}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElement5">
+                        <smartfield:SmartField id="rdncslField" textLabel="Rodné číslo" value="{Rdncsl}"></smartfield:SmartField>
+                    </smartform:GroupElement>                                                 
                 </smartform:Group>
             </smartform:SmartForm>
 
