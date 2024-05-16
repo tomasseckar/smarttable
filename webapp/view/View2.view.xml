@@ -1,0 +1,31 @@
+<mvc:View xmlns:smartfield="sap.ui.comp.smartfield" xmlns:smartform="sap.ui.comp.smartform" controllerName="smarttable.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    >
+    <Page id="page2" title="{i18n>detailSubjektTitle}">
+        <content>
+            <smartform:SmartForm id="smartForm1">
+                <smartform:Group id="group1" title="">
+                    <smartform:GroupElement id="groupElement1">
+                        <smartfield:SmartField id="idnsbjField" textLabel="Id subjektu" value="{Idnsbj}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElement2">
+                        <smartfield:SmartField id="jmnosbField" textLabel="Jméno osoby" value="{Jmnosb}"></smartfield:SmartField>
+                    </smartform:GroupElement>                    
+                </smartform:Group>
+            </smartform:SmartForm>
+
+<!--             <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN">
+                <smartfilterbar:controlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="idnsbjFilter" visibleInAdvancedArea="true" key="Idnsbj"/>
+                    <smartfilterbar:ControlConfiguration id="jmnosbFilter" visibleInAdvancedArea="true" key="Jmnosb"/>
+                    <smartfilterbar:ControlConfiguration id="rjosbFilter" visibleInAdvancedArea="true" key="Prjosb"/>
+                </smartfilterbar:controlConfiguration>
+            </smartfilterbar:SmartFilterBar>
+            <smarttable:SmartTable id="smartTable1" smartFilterId="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Typsbj,Jmnosb,Prjosb">
+            </smarttable:SmartTable> -->
+        </content>
+    </Page>
+</mvc:View>

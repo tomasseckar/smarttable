@@ -1,0 +1,24 @@
+<mvc:View controllerName="smarttable.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:ui="sap.ui"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+
+    >
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN">
+                <smartfilterbar:controlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="idnsbjFilter" visibleInAdvancedArea="true" key="Idnsbj"/>
+                    <smartfilterbar:ControlConfiguration id="jmnosbFilter" visibleInAdvancedArea="true" key="Jmnosb"/>
+                    <smartfilterbar:ControlConfiguration id="rjosbFilter" visibleInAdvancedArea="true" key="Prjosb"/>
+                    <smartfilterbar:ControlConfiguration id="nzvorgFilter" visibleInAdvancedArea="true" key="Nzvorg"/>
+                </smartfilterbar:controlConfiguration>
+            </smartfilterbar:SmartFilterBar>
+            <smarttable:SmartTable id="smartTable1" smartFilterId="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Typsbj,Jmnosb,Prjosb,Icoorg,Nzvorg">
+                <Table id="table1" selectionChange="onRowPress" mode="SingleSelectMaster" />
+            </smarttable:SmartTable>
+        </content>
+    </Page>
+</mvc:View>
