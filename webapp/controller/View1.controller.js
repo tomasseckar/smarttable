@@ -11,6 +11,16 @@ sap.ui.define([
             onInit: function () {
 
             },
+            onSelect: function () {
+                var selected = this.getView().byId("radioButtonGroup1").getSelectedButton().getText();
+                
+                if (selected==="Fyzická osoba") {
+                    this.getView().byId("smartFilterBar1").setVisible(false);
+                }
+                else if (selected==="Právnická osoba") {
+                    this.getView().byId("smartFilterBar1").setVisible(true);
+                }
+            },
             onRowPress: function () {
                 var table1 = this.getView().byId('table1');
                 var idnsbj1 = table1.getSelectedItem().getBindingContext().getProperty('Idnsbj');
