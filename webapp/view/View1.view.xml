@@ -29,11 +29,11 @@
             </smartfilterbar:SmartFilterBar>
 
             <smarttable:SmartTable id="smartTable1" smartFilterId="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Typsbj,Jmnosb,Prjosb">
-                <Table id="table1" selectionChange="onRowPress1" mode="SingleSelectMaster" />
+                <Table id="table1" selectionChange="onRowPress1" mode="SingleSelectMaster" growing="true" growingThreshold="20" />
             </smarttable:SmartTable>
 
             <smarttable:SmartTable id="smartTable2" smartFilterId="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Typsbj,Icoorg,Nzvorg">
-                <Table id="table2" selectionChange="onRowPress2" mode="SingleSelectMaster" />
+                <Table id="table2" selectionChange="onRowPress2" mode="SingleSelectMaster" growing="true" growingThreshold="20" />
             </smarttable:SmartTable>
         </content>
     </Page>

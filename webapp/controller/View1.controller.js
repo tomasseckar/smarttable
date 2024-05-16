@@ -13,7 +13,6 @@ sap.ui.define([
                 this.getView().byId("smartFilterBar2").setVisible(false);
                 this.getView().byId("smartTable1").setVisible(true);
                 this.getView().byId("smartTable2").setVisible(false);
-
             },
             onSelect: function () {
                 var selected = this.getView().byId("radioButtonGroup1").getSelectedButton().getText();
