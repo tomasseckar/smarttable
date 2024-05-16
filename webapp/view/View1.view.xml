@@ -13,14 +13,14 @@
                 <RadioButton id="radioButton2" text="Právnická osoba" ></RadioButton>
             </RadioButtonGroup>
 
-            <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN">
+            <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" search="onGo1">
                 <smartfilterbar:controlConfiguration>
                     <smartfilterbar:ControlConfiguration id="jmnosbFilter1" visibleInAdvancedArea="true" key="Jmnosb"/>
                     <smartfilterbar:ControlConfiguration id="prjosbFilter1" visibleInAdvancedArea="true" key="Prjosb"/>
                 </smartfilterbar:controlConfiguration>
             </smartfilterbar:SmartFilterBar>
 
-            <smartfilterbar:SmartFilterBar id="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN">
+            <smartfilterbar:SmartFilterBar id="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN" search="onGo2">
                 <smartfilterbar:controlConfiguration>
                     <smartfilterbar:ControlConfiguration id="icoorgFilter" visibleInAdvancedArea="true" key="Icoorg"/>
                     <smartfilterbar:ControlConfiguration id="nzvorgFilter" visibleInAdvancedArea="true" key="Nzvorg"/>

@@ -25,16 +25,6 @@
                     </smartform:GroupElement>                                                 
                 </smartform:Group>
             </smartform:SmartForm>
-
-<!--             <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN">
-                <smartfilterbar:controlConfiguration>
-                    <smartfilterbar:ControlConfiguration id="idnsbjFilter" visibleInAdvancedArea="true" key="Idnsbj"/>
-                    <smartfilterbar:ControlConfiguration id="jmnosbFilter" visibleInAdvancedArea="true" key="Jmnosb"/>
-                    <smartfilterbar:ControlConfiguration id="rjosbFilter" visibleInAdvancedArea="true" key="Prjosb"/>
-                </smartfilterbar:controlConfiguration>
-            </smartfilterbar:SmartFilterBar>
-            <smarttable:SmartTable id="smartTable1" smartFilterId="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Typsbj,Jmnosb,Prjosb">
-            </smarttable:SmartTable> -->
         </content>
     </Page>
 </mvc:View>

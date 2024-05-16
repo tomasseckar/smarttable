@@ -11,8 +11,9 @@ sap.ui.define([
             onInit: function () {
                 this.getView().byId("smartFilterBar1").setVisible(true);
                 this.getView().byId("smartFilterBar2").setVisible(false);
-                this.getView().byId("smartTable1").setVisible(true);
+                this.getView().byId("smartTable1").setVisible(false);
                 this.getView().byId("smartTable2").setVisible(false);
+                /* this.getView().byId("radioButtonGroup1").setSelectedButton("radioButton1"); */
             },
             onSelect: function () {
                 var selected = this.getView().byId("radioButtonGroup1").getSelectedButton().getText();
@@ -20,15 +21,23 @@ sap.ui.define([
                 if (selected==="Fyzická osoba") {
                     this.getView().byId("smartFilterBar1").setVisible(true);
                     this.getView().byId("smartFilterBar2").setVisible(false);
-                    this.getView().byId("smartTable1").setVisible(true);
+                    this.getView().byId("smartTable1").setVisible(false);
                     this.getView().byId("smartTable2").setVisible(false);
                 }
                 else if (selected==="Právnická osoba") {
                     this.getView().byId("smartFilterBar1").setVisible(false);
                     this.getView().byId("smartFilterBar2").setVisible(true);
                     this.getView().byId("smartTable1").setVisible(false);
-                    this.getView().byId("smartTable2").setVisible(true);
+                    this.getView().byId("smartTable2").setVisible(false);
                 }
+            },
+            onGo1: function () {
+                this.getView().byId("smartTable1").setVisible(true);
+                this.getView().byId("smartTable2").setVisible(false);
+            },
+            onGo2: function () {
+                this.getView().byId("smartTable1").setVisible(false);
+                this.getView().byId("smartTable2").setVisible(true);
             },
             onRowPress1: function () {
                 var table1 = this.getView().byId('table1');
