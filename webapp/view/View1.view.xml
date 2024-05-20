@@ -1,4 +1,4 @@
-<mvc:View controllerName="smarttable.controller.View1"
+<mvc:View xmlns:smartvariants="sap.ui.comp.smartvariants" controllerName="smarttable.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
     xmlns:ui="sap.ui"
@@ -8,22 +8,24 @@
     >
     <Page id="page" title="{i18n>title}">
         <content>
+            
             <RadioButtonGroup id="radioButtonGroup1" select="onSelect">
                 <RadioButton id="radioButton1" text="Fyzická osoba" ></RadioButton>
                 <RadioButton id="radioButton2" text="Právnická osoba" ></RadioButton>
             </RadioButtonGroup>
 
-            <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" search="onGo1">
-                <smartfilterbar:controlConfiguration>
-                    <smartfilterbar:ControlConfiguration id="jmnosbFilter1" visibleInAdvancedArea="true" key="Jmnosb"/>
-                    <smartfilterbar:ControlConfiguration id="prjosbFilter1" visibleInAdvancedArea="true" key="Prjosb"/>
-                </smartfilterbar:controlConfiguration>
-            </smartfilterbar:SmartFilterBar>
 
-            <smartfilterbar:SmartFilterBar id="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN" search="onGo2">
+            <smartfilterbar:SmartFilterBar id="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN" search="onGo2" suppressSelection="false">
                 <smartfilterbar:controlConfiguration>
                     <smartfilterbar:ControlConfiguration id="icoorgFilter" visibleInAdvancedArea="true" key="Icoorg"/>
                     <smartfilterbar:ControlConfiguration id="nzvorgFilter" visibleInAdvancedArea="true" key="Nzvorg"/>
+                </smartfilterbar:controlConfiguration>
+            </smartfilterbar:SmartFilterBar>
+
+            <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" search="onGo1" suppressSelection="false">
+                <smartfilterbar:controlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="jmnosbFilter1" visibleInAdvancedArea="true" key="Jmnosb"/>
+                    <smartfilterbar:ControlConfiguration id="prjosbFilter1" visibleInAdvancedArea="true" key="Prjosb"/>
                 </smartfilterbar:controlConfiguration>
             </smartfilterbar:SmartFilterBar>
 
