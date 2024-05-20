@@ -9,11 +9,8 @@
     <Page id="page" title="{i18n>title}">
         <content>
             
-            <RadioButtonGroup id="radioButtonGroup1" select="onSelect">
-                <RadioButton id="radioButton1" text="Fyzická osoba" ></RadioButton>
-                <RadioButton id="radioButton2" text="Právnická osoba" ></RadioButton>
-            </RadioButtonGroup>
-
+            <Button id="button1" press="onSelect1" text="Fyzická osoba"></Button>
+            <Button id="button2" press="onSelect2" text="Právnická osoba"></Button>
 
             <smartfilterbar:SmartFilterBar id="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN" search="onGo2" suppressSelection="false">
                 <smartfilterbar:controlConfiguration>
