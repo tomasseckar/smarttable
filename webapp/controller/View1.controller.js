@@ -28,6 +28,7 @@ sap.ui.define([
                 this.getView().byId("smartTable1").setVisible(false);
                 this.getView().byId("smartTable2").setVisible(false);
                 this.getView().byId("smartFilterBar1").setSuppressSelection(false);
+                this.getView().byId("smartFilterBar2").setSuppressSelection(true);
             },
             onSelect2: function () {
                 this.getView().byId("button1").setType("Default");
@@ -37,6 +38,7 @@ sap.ui.define([
                 this.getView().byId("smartTable1").setVisible(false);
                 this.getView().byId("smartTable2").setVisible(false);
                 this.getView().byId("smartFilterBar2").setSuppressSelection(false);
+                this.getView().byId("smartFilterBar1").setSuppressSelection(true);
             },
             onGo1: function () {
                 this.getView().byId("smartTable1").setVisible(true);
