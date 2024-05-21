@@ -1,0 +1,30 @@
+<mvc:View xmlns:smartfield="sap.ui.comp.smartfield" xmlns:smartform="sap.ui.comp.smartform" controllerName="smarttable.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    >
+    <Page id="page3" title="{i18n>detailSubjektTitle}">
+        <content>
+            <smartform:SmartForm id="smartFormP1">
+                <smartform:Group id="groupP1" title="">
+                    <smartform:GroupElement id="groupElementP1">
+                        <smartfield:SmartField id="idnsbjField" textLabel="Id subjektu" value="{Idnsbj}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElementP2">
+                        <smartfield:SmartField id="vrzsbjField" textLabel="Verze subjektu" value="{Vrzsbj}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElementP3">
+                        <smartfield:SmartField id="nzvorgField" textLabel="Název organizace" value="{Nzvorg}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElementP4">
+                        <smartfield:SmartField id="icoorgField" textLabel="IČO organizace" value="{Icoorg}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElementP5">
+                        <smartfield:SmartField id="statadrField" textLabel="Stát adresy" value="{Statadr}"></smartfield:SmartField>
+                    </smartform:GroupElement>                                                 
+                </smartform:Group>
+            </smartform:SmartForm>
+        </content>
+    </Page>
+</mvc:View>

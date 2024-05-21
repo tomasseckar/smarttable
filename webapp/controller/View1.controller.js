@@ -52,6 +52,7 @@ sap.ui.define([
                 var table1 = this.getView().byId('table1');
                 var idnsbj1 = table1.getSelectedItem().getBindingContext().getProperty('Idnsbj');
                 var vrzsbj1 = table1.getSelectedItem().getBindingContext().getProperty('Vrzsbj');
+//               var typsbj1 = table1.getSelectedItem().getBindingContext().getProperty('Typsbj');
                 this.getOwnerComponent().getRouter().navTo("RouteView2",{
                     Idnsbj : idnsbj1,
                     Vrzsbj : vrzsbj1
@@ -61,7 +62,7 @@ sap.ui.define([
                 var table1 = this.getView().byId('table2');
                 var idnsbj1 = table1.getSelectedItem().getBindingContext().getProperty('Idnsbj');
                 var vrzsbj1 = table1.getSelectedItem().getBindingContext().getProperty('Vrzsbj');
-                this.getOwnerComponent().getRouter().navTo("RouteView2",{
+                this.getOwnerComponent().getRouter().navTo("RouteView3",{
                     Idnsbj : idnsbj1,
                     Vrzsbj : vrzsbj1
                 });

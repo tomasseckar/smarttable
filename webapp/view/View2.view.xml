@@ -22,9 +22,23 @@
                     </smartform:GroupElement>
                     <smartform:GroupElement id="groupElement5">
                         <smartfield:SmartField id="rdncslField" textLabel="Rodné číslo" value="{Rdncsl}"></smartfield:SmartField>
-                    </smartform:GroupElement>                                                 
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElement6">
+                        <smartfield:SmartField id="pscField" textLabel="PSČ" value="{Psc}"></smartfield:SmartField>
+                    </smartform:GroupElement>                                                    
                 </smartform:Group>
             </smartform:SmartForm>
+
+            <Button id="button1" press="onPress1" type="Default" text="Výplata dávek" ></Button>
+            <Button id="button2" press="onPress2" type="Default" text="Jedn.odšk." ></Button>
+            <Button id="button3" press="onPress3" type="Default" text="Výpl.exekucí" ></Button>
+            <Button id="button4" press="onPress4" type="Default" text="Vymáh.přepl." ></Button>
+            <Button id="button5" press="onPress5" type="Default" text="Pož. na výplatu" ></Button>
+            <Button id="button6" press="onPress6" type="Default" text="Deponované v." ></Button>
+            <Button id="button7" press="onPress7" type="Default" text="Refundace" ></Button>
+
+
+
         </content>
     </Page>
 </mvc:View>

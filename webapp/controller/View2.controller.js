@@ -9,12 +9,83 @@ sap.ui.define([
 
         return Controller.extend("smarttable.controller.View2", {
             onInit: function () {
-                this.getOwnerComponent().getRouter().getRoute("RouteView2").attachPatternMatched(this.objectMatched, this)
+                this.getOwnerComponent().getRouter().getRoute("RouteView2").attachPatternMatched(this.objectMatched, this);
             },
             objectMatched: function(oEvent) {
                 this.Idnsbj = oEvent.getParameter('arguments').Idnsbj;
                 this.Vrzsbj = oEvent.getParameter('arguments').Vrzsbj;
                 this.getView().bindElement("/ZTS_SUBJEKT_MAIN(Idnsbj="+ this.Idnsbj +",Vrzsbj="+ this.Vrzsbj +")");
-            }
+                this.getView().byId("button1").setType("Default");
+                this.getView().byId("button2").setType("Default");
+                this.getView().byId("button3").setType("Default");
+                this.getView().byId("button4").setType("Default");
+                this.getView().byId("button5").setType("Default");
+                this.getView().byId("button6").setType("Default");
+                this.getView().byId("button7").setType("Default");
+            },
+            onPress1: function() {
+                this.getView().byId("button1").setType("Emphasized");
+                this.getView().byId("button2").setType("Default");
+                this.getView().byId("button3").setType("Default");
+                this.getView().byId("button4").setType("Default");
+                this.getView().byId("button5").setType("Default");
+                this.getView().byId("button6").setType("Default");
+                this.getView().byId("button7").setType("Default");
+            },
+            onPress2: function() {
+                this.getView().byId("button1").setType("Default");
+                this.getView().byId("button2").setType("Emphasized");
+                this.getView().byId("button3").setType("Default");
+                this.getView().byId("button4").setType("Default");
+                this.getView().byId("button5").setType("Default");
+                this.getView().byId("button6").setType("Default");
+                this.getView().byId("button7").setType("Default");
+            },
+            onPress3: function() {
+                this.getView().byId("button1").setType("Default");
+                this.getView().byId("button2").setType("Default");
+                this.getView().byId("button3").setType("Emphasized");
+                this.getView().byId("button4").setType("Default");
+                this.getView().byId("button5").setType("Default");
+                this.getView().byId("button6").setType("Default");
+                this.getView().byId("button7").setType("Default");
+            },
+            onPress4: function() {
+                this.getView().byId("button1").setType("Default");
+                this.getView().byId("button2").setType("Default");
+                this.getView().byId("button3").setType("Default");
+                this.getView().byId("button4").setType("Emphasized");
+                this.getView().byId("button5").setType("Default");
+                this.getView().byId("button6").setType("Default");
+                this.getView().byId("button7").setType("Default");
+            },
+            onPress5: function() {
+                this.getView().byId("button1").setType("Default");
+                this.getView().byId("button2").setType("Default");
+                this.getView().byId("button3").setType("Default");
+                this.getView().byId("button4").setType("Default");
+                this.getView().byId("button5").setType("Emphasized");
+                this.getView().byId("button6").setType("Default");
+                this.getView().byId("button7").setType("Default");
+            },
+            onPress6: function() {
+                this.getView().byId("button1").setType("Default");
+                this.getView().byId("button2").setType("Default");
+                this.getView().byId("button3").setType("Default");
+                this.getView().byId("button4").setType("Default");
+                this.getView().byId("button5").setType("Default");
+                this.getView().byId("button6").setType("Emphasized");
+                this.getView().byId("button7").setType("Default");
+            },
+            onPress7: function() {
+                this.getView().byId("button1").setType("Default");
+                this.getView().byId("button2").setType("Default");
+                this.getView().byId("button3").setType("Default");
+                this.getView().byId("button4").setType("Default");
+                this.getView().byId("button5").setType("Default");
+                this.getView().byId("button6").setType("Default");
+                this.getView().byId("button7").setType("Emphasized");
+            },
+
         });
     });

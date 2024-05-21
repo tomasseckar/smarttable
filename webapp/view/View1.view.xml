@@ -13,6 +13,14 @@
             
             <Button id="button2" press="onSelect2" text="Právnická osoba" type="Default" ></Button>
 
+            <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" search="onGo1" suppressSelection="false">
+                <smartfilterbar:controlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="jmnosbFilter1" visibleInAdvancedArea="true" key="Jmnosb"/>
+                    <smartfilterbar:ControlConfiguration id="prjosbFilter1" visibleInAdvancedArea="true" key="Prjosb"/>
+                    <smartfilterbar:ControlConfiguration id="idnsbjFilter1" visibleInAdvancedArea="true" key="Idnsbj"/>
+                </smartfilterbar:controlConfiguration>
+            </smartfilterbar:SmartFilterBar>
+
             <smartfilterbar:SmartFilterBar id="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN" search="onGo2" suppressSelection="false">
                 <smartfilterbar:controlConfiguration>
                     <smartfilterbar:ControlConfiguration id="icoorgFilter" visibleInAdvancedArea="true" key="Icoorg"/>
@@ -20,14 +28,7 @@
                 </smartfilterbar:controlConfiguration>
             </smartfilterbar:SmartFilterBar>
 
-            <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" search="onGo1" suppressSelection="false">
-                <smartfilterbar:controlConfiguration>
-                    <smartfilterbar:ControlConfiguration id="jmnosbFilter1" visibleInAdvancedArea="true" key="Jmnosb"/>
-                    <smartfilterbar:ControlConfiguration id="prjosbFilter1" visibleInAdvancedArea="true" key="Prjosb"/>
-                </smartfilterbar:controlConfiguration>
-            </smartfilterbar:SmartFilterBar>
-
-            <smarttable:SmartTable id="smartTable1" smartFilterId="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Jmnosb,Prjosb">
+            <smarttable:SmartTable id="smartTable1" smartFilterId="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Jmnosb,Prjosb,Psc,Idnspj,_Subjos._Spjadr.Psc,Agneks">
                 <Table id="table1" selectionChange="onRowPress1" mode="SingleSelectMaster" growing="true" growingThreshold="20" />
             </smarttable:SmartTable>
 
