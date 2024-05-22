@@ -6,24 +6,24 @@
     >
     <Page id="page2" title="{i18n>detailSubjektTitle}">
         <content>
-            <smartform:SmartForm id="smartForm1">
-                <smartform:Group id="group1" title="">
-                    <smartform:GroupElement id="groupElement1">
+            <smartform:SmartForm id="smartFormBase">
+                <smartform:Group id="groupBase" title="">
+                    <smartform:GroupElement id="groupElementBase1">
                         <smartfield:SmartField id="idnsbjField" textLabel="Id subjektu" value="{Idnsbj}"></smartfield:SmartField>
                     </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElement2">
+                    <smartform:GroupElement id="groupElementBase2">
                         <smartfield:SmartField id="vrzsbjField" textLabel="Verze subjektu" value="{Vrzsbj}"></smartfield:SmartField>
                     </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElement3">
+                    <smartform:GroupElement id="groupElementBase3">
                         <smartfield:SmartField id="jmnosbField" textLabel="Jméno" value="{Jmnosb}"></smartfield:SmartField>
                     </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElement4">
+                    <smartform:GroupElement id="groupElementBase4">
                         <smartfield:SmartField id="prjosbField" textLabel="Příjmení" value="{Prjosb}"></smartfield:SmartField>
                     </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElement5">
+                    <smartform:GroupElement id="groupElementBase5">
                         <smartfield:SmartField id="rdncslField" textLabel="Rodné číslo" value="{Rdncsl}"></smartfield:SmartField>
                     </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElement6">
+                    <smartform:GroupElement id="groupElementBase6">
                         <smartfield:SmartField id="pscField" textLabel="PSČ" value="{Psc}"></smartfield:SmartField>
                     </smartform:GroupElement>                                                    
                 </smartform:Group>
@@ -37,8 +37,24 @@
             <Button id="button6" press="onPress6" type="Default" text="Deponované v." ></Button>
             <Button id="button7" press="onPress7" type="Default" text="Refundace" ></Button>
 
+            <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl">
+            </smarttable:SmartTable>
 
+            <smartform:SmartForm id="smartForm1">
+                <smartform:Group id="group1" title="">
+                    <smartform:GroupElement id="groupElement11">
+                        <smartfield:SmartField id="agneksField1" textLabel="Agenda EKIS" value="{Agneks}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElement12">
+                        <smartfield:SmartField id="ZpspltField1" textLabel="Způsob platby" value="{Zpsplt}"></smartfield:SmartField>
+                    </smartform:GroupElement>
+                    <smartform:GroupElement id="groupElement13">
+                        <smartfield:SmartField id="dtmsplField1" textLabel="Datum splátky" value="{Dtmspl}"></smartfield:SmartField> 
+                    </smartform:GroupElement>                                                  
+                </smartform:Group>
+            </smartform:SmartForm>
 
+    
         </content>
     </Page>
 </mvc:View>
