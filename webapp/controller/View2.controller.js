@@ -46,15 +46,16 @@ sap.ui.define([
                 var filterData = oSmartFilterBar.getFilterDataAsString();
                 debugger; */
             },
-            onBeforeRebindTable: function(oSource){
+            onBeforeRebindTable: function(oSource) {
                 /* this.Idnprj = oEvent.getParameter('arguments').Idnsbj;
                 this.Vrzprj = oEvent.getParameter('arguments').Vrzsbj; */
 
                 var binding = oSource.getParameter("bindingParams");
             
-                var oFilter = new sap.ui.model.Filter("Idnprj", sap.ui.model.FilterOperator.EQ, 4);
+                var oFilterIdn = new sap.ui.model.Filter("Idnprj", sap.ui.model.FilterOperator.EQ, this.Idnsbj);
+                var oFilterVrz = new sap.ui.model.Filter("Vrzprj", sap.ui.model.FilterOperator.EQ, this.Vrzsbj);
                 
-                binding.filters.push(oFilter);
+                binding.filters.push(oFilterIdn, oFilterVrz);
             
             } ,
             onPress1: function() {
