@@ -37,7 +37,15 @@
             <Button id="button6" press="onPress6" type="Default" text="Deponované v." ></Button>
             <Button id="button7" press="onPress7" type="Default" text="Refundace" ></Button>
 
-            <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl">
+            <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" >
+                <smartfilterbar:controlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="idnprjFilter1" visibleInAdvancedArea="true" key="Idnprj"/>
+                    <smartfilterbar:ControlConfiguration id="vrzprjFilter1" visibleInAdvancedArea="true" key="Vrzprj"/>
+                    <smartfilterbar:ControlConfiguration id="agneksFilter1" visibleInAdvancedArea="true" key="Agneks"/>
+                </smartfilterbar:controlConfiguration>
+            </smartfilterbar:SmartFilterBar>
+
+            <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnprj,Vrzprj,Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
             </smarttable:SmartTable>
 
             <smartform:SmartForm id="smartForm1">
