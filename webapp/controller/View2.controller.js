@@ -14,8 +14,6 @@ sap.ui.define([
             objectMatched: function(oEvent)  {
                 this.Idnsbj = oEvent.getParameter('arguments').Idnsbj;
                 this.Vrzsbj = oEvent.getParameter('arguments').Vrzsbj;
-//                this.Idnprj = oEvent.getParameter('arguments').Idnsbj;
- //               this.Vrzprj = oEvent.getParameter('arguments').Vrzsbj;
                 this.getView().bindElement("/ZTS_SUBJEKT_MAIN(Idnsbj="+ this.Idnsbj +",Vrzsbj="+ this.Vrzsbj +")");
                 this.getView().byId("button1").setType("Default");
                 this.getView().byId("button2").setType("Default");
@@ -25,30 +23,11 @@ sap.ui.define([
                 this.getView().byId("button6").setType("Default");
                 this.getView().byId("button7").setType("Default");
                 this.getView().byId("smartTableDetail1").setVisible(false);
-                this.getView().byId("smartForm1").setVisible(false);
                 this.getView().byId("smartFilterDetail1").setVisible(false);
-                //return Idnsbj;
             },
             onFilter1: function() {
-/*                 var oSmartFilterBar = this.getView().byId("smartFilterDetail1");
-
-                var filterData1 = {
-                    Idnprj: {
-                        exclude: false,
-                        keyField: "Idnprj"
-                    }
-                };
-
-                oSmartFilterBar.setFilterData(filterData1); */
-
-/*                 debugger;
-                //var defaultFilterData = oSmartFilterBar.getDefaultFilterValues();
-                var filterData = oSmartFilterBar.getFilterDataAsString();
-                debugger; */
             },
             onBeforeRebindTable: function(oSource) {
-                /* this.Idnprj = oEvent.getParameter('arguments').Idnsbj;
-                this.Vrzprj = oEvent.getParameter('arguments').Vrzsbj; */
 
                 var binding = oSource.getParameter("bindingParams");
             
@@ -56,8 +35,10 @@ sap.ui.define([
                 var oFilterVrz = new sap.ui.model.Filter("Vrzprj", sap.ui.model.FilterOperator.EQ, this.Vrzsbj);
                 
                 binding.filters.push(oFilterIdn, oFilterVrz);
-            
+                
             } ,
+            onBeforeRendering: function() {
+            },
             onPress1: function() {
                 this.getView().byId("button1").setType("Emphasized");
                 this.getView().byId("button2").setType("Default");
@@ -68,33 +49,8 @@ sap.ui.define([
                 this.getView().byId("button7").setType("Default");
                 this.getView().byId("smartFilterDetail1").setVisible(true);
                 this.getView().byId("smartTableDetail1").setVisible(true);
-                this.getView().byId("smartForm1").setVisible(false);
+                this.getView().byId("smartFilterDetail1").search();
 
-
-
-
-                //var oSmartFilterBar = this.getView().byId("smartFilterDetail1");
-
-                //Create JSON data that contains the Inital value of the filter
-/*                 var oDefaultFilter = {
-                    "Idnprj": {
-                        "conditionTypeInfo": {
-                            //"name": "sap.ui.comp.config.condition.DateRangeType",
-                            "data": {
-                                "operation": "EQ",
-                                "value1": 4,
-                                "value2": null,
-                                "key": "Idnprj",
-                                "calendarType": "Gregorian"
-                            }
-                        }
-                    }
-                };
- */
-                //Set SmartFilterBar initial values
-                //oSmartFilterBar.addDefaultFilterValue("Idnprj", "4");
-                //oSmartFilterBar.addDefaultFilterValue("Vrzprj", "1");
-                //oSmartFilterBar.setFilterData("Idnprj", "4");
             },
             onPress2: function() {
                 this.getView().byId("button1").setType("Default");
@@ -104,8 +60,9 @@ sap.ui.define([
                 this.getView().byId("button5").setType("Default");
                 this.getView().byId("button6").setType("Default");
                 this.getView().byId("button7").setType("Default");
-                this.getView().byId("smartTableDetail1").setVisible(false);
-                this.getView().byId("smartForm1").setVisible(true);
+                this.getView().byId("smartTableDetail1").setVisible(true);
+                this.getView().byId("smartFilterDetail1").setVisible(true);
+                this.getView().byId("smartFilterDetail1").search();
             },
             onPress3: function() {
                 this.getView().byId("button1").setType("Default");
@@ -116,7 +73,7 @@ sap.ui.define([
                 this.getView().byId("button6").setType("Default");
                 this.getView().byId("button7").setType("Default");
                 this.getView().byId("smartTableDetail1").setVisible(false);
-                this.getView().byId("smartForm1").setVisible(false);
+                this.getView().byId("smartFilterDetail1").setVisible(false);
             },
             onPress4: function() {
                 this.getView().byId("button1").setType("Default");
@@ -127,7 +84,7 @@ sap.ui.define([
                 this.getView().byId("button6").setType("Default");
                 this.getView().byId("button7").setType("Default");
                 this.getView().byId("smartTableDetail1").setVisible(false);
-                this.getView().byId("smartForm1").setVisible(false);
+                this.getView().byId("smartFilterDetail1").setVisible(false);
             },
             onPress5: function() {
                 this.getView().byId("button1").setType("Default");
@@ -138,7 +95,7 @@ sap.ui.define([
                 this.getView().byId("button6").setType("Default");
                 this.getView().byId("button7").setType("Default");
                 this.getView().byId("smartTableDetail1").setVisible(false);
-                this.getView().byId("smartForm1").setVisible(false);
+                this.getView().byId("smartFilterDetail1").setVisible(false);
             },
             onPress6: function() {
                 this.getView().byId("button1").setType("Default");
@@ -149,7 +106,7 @@ sap.ui.define([
                 this.getView().byId("button6").setType("Emphasized");
                 this.getView().byId("button7").setType("Default");
                 this.getView().byId("smartTableDetail1").setVisible(false);
-                this.getView().byId("smartForm1").setVisible(false);
+                this.getView().byId("smartFilterDetail1").setVisible(false);
             },
             onPress7: function() {
                 this.getView().byId("button1").setType("Default");
@@ -160,7 +117,7 @@ sap.ui.define([
                 this.getView().byId("button6").setType("Default");
                 this.getView().byId("button7").setType("Emphasized");
                 this.getView().byId("smartTableDetail1").setVisible(false);
-                this.getView().byId("smartForm1").setVisible(false);
+                this.getView().byId("smartFilterDetail1").setVisible(false);
             },
 
         });

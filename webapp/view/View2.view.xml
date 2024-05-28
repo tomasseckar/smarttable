@@ -37,30 +37,14 @@
             <Button id="button6" press="onPress6" type="Default" text="Deponované v." ></Button>
             <Button id="button7" press="onPress7" type="Default" text="Refundace" ></Button>
 
-            <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" >
+            <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
                 <smartfilterbar:controlConfiguration>
-                    <smartfilterbar:ControlConfiguration id="idnprjFilter1" visibleInAdvancedArea="true" key="Idnprj"/>
-                    <smartfilterbar:ControlConfiguration id="vrzprjFilter1" visibleInAdvancedArea="true" key="Vrzprj"/>
                     <smartfilterbar:ControlConfiguration id="agneksFilter1" visibleInAdvancedArea="true" key="Agneks"/>
                 </smartfilterbar:controlConfiguration>
             </smartfilterbar:SmartFilterBar>
 
-            <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnprj,Vrzprj,Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
+            <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
             </smarttable:SmartTable>
-
-            <smartform:SmartForm id="smartForm1">
-                <smartform:Group id="group1" title="">
-                    <smartform:GroupElement id="groupElement11">
-                        <smartfield:SmartField id="agneksField1" textLabel="Agenda EKIS" value="{Agneks}"></smartfield:SmartField>
-                    </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElement12">
-                        <smartfield:SmartField id="ZpspltField1" textLabel="Způsob platby" value="{Zpsplt}"></smartfield:SmartField>
-                    </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElement13">
-                        <smartfield:SmartField id="dtmsplField1" textLabel="Datum splátky" value="{Dtmspl}"></smartfield:SmartField> 
-                    </smartform:GroupElement>                                                  
-                </smartform:Group>
-            </smartform:SmartForm>
 
     
         </content>
