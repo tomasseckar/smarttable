@@ -40,6 +40,7 @@
             <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
                 <smartfilterbar:controlConfiguration>
                     <smartfilterbar:ControlConfiguration id="agneksFilter1" visibleInAdvancedArea="true" key="Agneks"/>
+                    <smartfilterbar:ControlConfiguration id="dtmnrzFilter1" key="Dtmnrz" visible="false"/>
                 </smartfilterbar:controlConfiguration>
             </smartfilterbar:SmartFilterBar>
 
