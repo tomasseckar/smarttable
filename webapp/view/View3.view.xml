@@ -6,25 +6,42 @@
     >
     <Page id="page3" title="{i18n>detailSubjektTitle}">
         <content>
-            <smartform:SmartForm id="smartFormP1">
-                <smartform:Group id="groupP1" title="">
-                    <smartform:GroupElement id="groupElementP1">
+            <smartform:SmartForm id="smartFormBase">
+                <smartform:Group id="groupBase" title="">
+                    <smartform:GroupElement id="groupElementBase1">
                         <smartfield:SmartField id="idnsbjField" textLabel="Id subjektu" value="{Idnsbj}"></smartfield:SmartField>
                     </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElementP2">
+                    <smartform:GroupElement id="groupElementBase2">
                         <smartfield:SmartField id="vrzsbjField" textLabel="Verze subjektu" value="{Vrzsbj}"></smartfield:SmartField>
                     </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElementP3">
+                    <smartform:GroupElement id="groupElementBase3">
                         <smartfield:SmartField id="nzvorgField" textLabel="Název organizace" value="{Nzvorg}"></smartfield:SmartField>
                     </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElementP4">
+                    <smartform:GroupElement id="groupElementBase4">
                         <smartfield:SmartField id="icoorgField" textLabel="IČO organizace" value="{Icoorg}"></smartfield:SmartField>
                     </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElementP5">
+                    <smartform:GroupElement id="groupElementBase5">
                         <smartfield:SmartField id="statadrField" textLabel="Stát adresy" value="{Statadr}"></smartfield:SmartField>
                     </smartform:GroupElement>                                                 
                 </smartform:Group>
             </smartform:SmartForm>
+
+            <Button id="button1" press="onPress1" type="Default" text="Výplata dávek" ></Button>
+            <Button id="button2" press="onPress2" type="Default" text="Jedn.odšk." ></Button>
+            <Button id="button3" press="onPress3" type="Default" text="Výpl.exekucí" ></Button>
+            <Button id="button4" press="onPress4" type="Default" text="Vymáh.přepl." ></Button>
+            <Button id="button5" press="onPress5" type="Default" text="Pož. na výplatu" ></Button>
+            <Button id="button6" press="onPress6" type="Default" text="Deponované v." ></Button>
+            <Button id="button7" press="onPress7" type="Default" text="Refundace" ></Button>
+
+            <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
+                <smartfilterbar:controlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="agneksFilter1" visibleInAdvancedArea="true" key="Agneks"/>
+                </smartfilterbar:controlConfiguration>
+            </smartfilterbar:SmartFilterBar>
+
+            <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
+            </smarttable:SmartTable>
         </content>
     </Page>
 </mvc:View>

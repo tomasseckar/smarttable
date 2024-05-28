@@ -17,7 +17,6 @@
                 <smartfilterbar:controlConfiguration>
                     <smartfilterbar:ControlConfiguration id="jmnosbFilter1" visibleInAdvancedArea="true" key="Jmnosb"/>
                     <smartfilterbar:ControlConfiguration id="prjosbFilter1" visibleInAdvancedArea="true" key="Prjosb"/>
-                    <smartfilterbar:ControlConfiguration id="idnsbjFilter1" visibleInAdvancedArea="true" key="Idnsbj"/>
                 </smartfilterbar:controlConfiguration>
             </smartfilterbar:SmartFilterBar>
 
