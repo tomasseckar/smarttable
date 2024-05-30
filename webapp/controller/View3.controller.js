@@ -34,8 +34,7 @@ sap.ui.define([
                 var oFilterIdn = new sap.ui.model.Filter("Idnprj", sap.ui.model.FilterOperator.EQ, this.Idnsbj);
                 var oFilterVrz = new sap.ui.model.Filter("Vrzprj", sap.ui.model.FilterOperator.EQ, this.Vrzsbj);
                 
-                binding.filters.push(oFilterIdn, oFilterVrz);
-                
+                binding.filters.push(oFilterIdn, oFilterVrz);          
             } ,
             onBeforeRendering: function() {
             },
@@ -47,8 +46,8 @@ sap.ui.define([
                 this.getView().byId("button5").setType("Default");
                 this.getView().byId("button6").setType("Default");
                 this.getView().byId("button7").setType("Default");
-                this.getView().byId("smartFilterDetail1").setVisible(true);
                 this.getView().byId("smartTableDetail1").setVisible(true);
+                this.getView().byId("smartFilterDetail1").setVisible(true);
                 this.getView().byId("smartFilterDetail1").search();
 
             },

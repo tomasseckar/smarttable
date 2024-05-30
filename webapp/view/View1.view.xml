@@ -34,6 +34,7 @@
             <smarttable:SmartTable id="smartTable2" smartFilterId="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Icoorg,Nzvorg">
                 <Table id="table2" selectionChange="onRowPress2" mode="SingleSelectMaster" growing="true" growingThreshold="20" />
             </smarttable:SmartTable>
+            
         </content>
     </Page>
 </mvc:View>

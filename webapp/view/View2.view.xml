@@ -47,7 +47,6 @@
             <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
             </smarttable:SmartTable>
 
-    
         </content>
     </Page>
 </mvc:View>
