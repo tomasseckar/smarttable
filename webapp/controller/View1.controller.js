@@ -9,43 +9,21 @@ sap.ui.define([
 
         return Controller.extend("smarttable.controller.View1", {
             onInit: function () {
-                this.getView().byId("smartFilterBar1").setVisible(false);
-                this.getView().byId("smartFilterBar2").setVisible(false);
                 this.getView().byId("smartTable1").setVisible(false);
                 this.getView().byId("smartTable2").setVisible(false);
-                this.getView().byId("smartFilterBar1").setSuppressSelection(true);
-                this.getView().byId("smartFilterBar2").setSuppressSelection(true);
+            },
+            tabSelected: function() {
+                this.getView().byId("smartTable1").setVisible(false);
+                this.getView().byId("smartTable2").setVisible(false);
             },
             onBeforeRendering: function () {
             },
             onAfterRendering: function () {
             },
-            onSelect1: function () {
-                this.getView().byId("button1").setType("Emphasized");
-                this.getView().byId("button2").setType("Default");
-                this.getView().byId("smartFilterBar1").setVisible(true);
-                this.getView().byId("smartFilterBar2").setVisible(false);
-                this.getView().byId("smartTable1").setVisible(false);
-                this.getView().byId("smartTable2").setVisible(false);
-                this.getView().byId("smartFilterBar1").setSuppressSelection(false);
-                this.getView().byId("smartFilterBar2").setSuppressSelection(true);
-            },
-            onSelect2: function () {
-                this.getView().byId("button1").setType("Default");
-                this.getView().byId("button2").setType("Emphasized");
-                this.getView().byId("smartFilterBar1").setVisible(false);
-                this.getView().byId("smartFilterBar2").setVisible(true);
-                this.getView().byId("smartTable1").setVisible(false);
-                this.getView().byId("smartTable2").setVisible(false);
-                this.getView().byId("smartFilterBar2").setSuppressSelection(false);
-                this.getView().byId("smartFilterBar1").setSuppressSelection(true);
-            },
             onGo1: function () {
-                this.getView().byId("smartTable1").setVisible(true);
-                this.getView().byId("smartTable2").setVisible(false);           
+            this.getView().byId("smartTable1").setVisible(true);         
             },
             onGo2: function () {
-                this.getView().byId("smartTable1").setVisible(false);
                 this.getView().byId("smartTable2").setVisible(true);
             },
             onRowPress1: function () {
