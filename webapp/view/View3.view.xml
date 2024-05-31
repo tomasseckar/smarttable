@@ -26,23 +26,47 @@
                 </smartform:Group>
             </smartform:SmartForm>
 
-            <Button id="button1" press="onPress1" type="Default" text="Výplata dávek" ></Button>
-            <Button id="button2" press="onPress2" type="Default" text="Jedn.odšk." ></Button>
-            <Button id="button3" press="onPress3" type="Default" text="Výpl.exekucí" ></Button>
-            <Button id="button4" press="onPress4" type="Default" text="Vymáh.přepl." ></Button>
-            <Button id="button5" press="onPress5" type="Default" text="Pož. na výplatu" ></Button>
-            <Button id="button6" press="onPress6" type="Default" text="Deponované v." ></Button>
-            <Button id="button7" press="onPress7" type="Default" text="Refundace" ></Button>
+            <IconTabBar id="iconTabBar1" select="tabSelected">
+                <items>
+                    <IconTabFilter id="idTab1" text="Výplata dávek" >
+                        <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
+                            <smartfilterbar:controlConfiguration>
+                                <smartfilterbar:ControlConfiguration id="agneksFilter1" visibleInAdvancedArea="true" key="Agneks"/>
+                            </smartfilterbar:controlConfiguration>
+                        </smartfilterbar:SmartFilterBar>
 
-            <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
-                <smartfilterbar:controlConfiguration>
-                    <smartfilterbar:ControlConfiguration id="agneksFilter1" visibleInAdvancedArea="true" key="Agneks"/>
-                </smartfilterbar:controlConfiguration>
-            </smartfilterbar:SmartFilterBar>
+                        <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
+                        </smarttable:SmartTable>
+                    </IconTabFilter>
 
-            <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
-            </smarttable:SmartTable>
-            
+                    <IconTabFilter id="idTab2" text="Jedn.odšk.">
+                        <smartfilterbar:SmartFilterBar id="smartFilterDetail2" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
+                            <smartfilterbar:controlConfiguration>
+                                <smartfilterbar:ControlConfiguration id="agneksFilter2" visibleInAdvancedArea="true" key="Agneks"/>
+                            </smartfilterbar:controlConfiguration>
+                        </smartfilterbar:SmartFilterBar>
+
+                        <smarttable:SmartTable id="smartTableDetail2" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
+                        </smarttable:SmartTable>
+                    </IconTabFilter>
+
+                    <IconTabFilter id="idTab3" text="Výpl.exekucí">
+                    </IconTabFilter>
+
+                    <IconTabFilter id="idTab4" text="Vymáh.přepl.">
+                    </IconTabFilter>
+
+                    <IconTabFilter id="idTab5" text="Pož. na výplatu">
+                    </IconTabFilter>
+
+                    <IconTabFilter id="idTab6" text="Deponované v.">
+                    </IconTabFilter>
+
+                    <IconTabFilter id="idTab7" text="Refundace">
+                    </IconTabFilter>
+                    
+                </items>
+            </IconTabBar> 
         </content>
     </Page>
 </mvc:View>
