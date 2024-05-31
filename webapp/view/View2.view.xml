@@ -36,7 +36,7 @@
                         <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
                             <smartfilterbar:controlConfiguration>
                                 <smartfilterbar:ControlConfiguration id="agneksFilter1" visibleInAdvancedArea="true" key="Agneks"/>
-                                <smartfilterbar:ControlConfiguration id="dtmnrzFilter1" key="Dtmnrz" visible="false"/>
+                                <smartfilterbar:ControlConfiguration id="icoorgFilter1" key="to_Subjor.Icoorg" visible="false"/>
                             </smartfilterbar:controlConfiguration>
                         </smartfilterbar:SmartFilterBar>
 
@@ -48,7 +48,7 @@
                         <smartfilterbar:SmartFilterBar id="smartFilterDetail2" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
                             <smartfilterbar:controlConfiguration>
                                 <smartfilterbar:ControlConfiguration id="agneksFilter2" visibleInAdvancedArea="true" key="Agneks"/>
-                                <smartfilterbar:ControlConfiguration id="dtmnrzFilter2" key="Dtmnrz" visible="false"/>
+                                <smartfilterbar:ControlConfiguration id="icoorgFilter2" key="to_Subjor.Icoorg" visible="false"/>
                             </smartfilterbar:controlConfiguration>
                         </smartfilterbar:SmartFilterBar>
 
