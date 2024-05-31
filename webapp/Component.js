@@ -5,9 +5,10 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "smarttable/model/models"
+        "smarttable/model/models",
+        "sap/base/Log"
     ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, models, Log) {
         "use strict";
 
         return UIComponent.extend("smarttable.Component", {
@@ -23,6 +24,8 @@ sap.ui.define([
             init: function () {
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
+
+                Log.setLevel(Log.Level.WARNING);
 
                 // enable routing
                 this.getRouter().initialize();
