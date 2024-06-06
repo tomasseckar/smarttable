@@ -18,7 +18,6 @@
                                 <smartfilterbar:ControlConfiguration id="prjosbFilter1" visibleInAdvancedArea="true" key="Prjosb"/>
                             </smartfilterbar:controlConfiguration>
                         </smartfilterbar:SmartFilterBar>
-
                         <smarttable:SmartTable id="smartTable1" smartFilterId="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Jmnosb,Prjosb,Psc,Idnspj,Agneks">
                             <Table id="table1" selectionChange="onRowPress1" mode="SingleSelectMaster" growing="true" growingThreshold="20" />
                         </smarttable:SmartTable>

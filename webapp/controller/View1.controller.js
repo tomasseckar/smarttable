@@ -26,7 +26,12 @@ sap.ui.define([
             onGo2: function () {
                 this.getView().byId("smartTable2").setVisible(true);
             },
-            onRowPress1: function () {
+            onRowPress1: function (oEvent) {
+
+                //var object1 = oEvent.getParameter("listItem").getBindingContextPath();
+                //var object2 = oEvent.getSource().getBindingContext().getProperty("Idnsbj");
+                //debugger;
+
                 var table1 = this.getView().byId('table1');
                 var idnsbj1 = table1.getSelectedItem().getBindingContext().getProperty('Idnsbj');
                 var vrzsbj1 = table1.getSelectedItem().getBindingContext().getProperty('Vrzsbj');
