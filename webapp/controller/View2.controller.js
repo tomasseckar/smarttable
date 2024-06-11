@@ -29,9 +29,9 @@ sap.ui.define([
                 var binding = oSource.getParameter("bindingParams");
             
                 var oFilterIdn = new sap.ui.model.Filter("Idnprj", sap.ui.model.FilterOperator.EQ, this.Idnsbj);
-                var oFilterVrz = new sap.ui.model.Filter("Vrzprj", sap.ui.model.FilterOperator.EQ, this.Vrzsbj);
+                //var oFilterVrz = new sap.ui.model.Filter("Vrzprj", sap.ui.model.FilterOperator.EQ, this.Vrzsbj);
                 
-                binding.filters.push(oFilterIdn, oFilterVrz);             
+                binding.filters.push(oFilterIdn); // , oFilterVrz            
             } ,
 
             onBeforeRendering: function() {

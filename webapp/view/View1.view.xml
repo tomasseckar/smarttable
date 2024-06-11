@@ -12,7 +12,7 @@
             <IconTabBar id="iconTabBar1" select="tabSelected" expanded="false">
                 <items>
                     <IconTabFilter id="tapFO" text="Fyzická osoba" >
-                        <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" search="onGo1" suppressSelection="false">
+                         <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" search="onGo1" suppressSelection="false">
                             <smartfilterbar:controlConfiguration>
                                 <smartfilterbar:ControlConfiguration id="jmnosbFilter1" visibleInAdvancedArea="true" key="Jmnosb"/>
                                 <smartfilterbar:ControlConfiguration id="prjosbFilter1" visibleInAdvancedArea="true" key="Prjosb"/>
@@ -31,6 +31,7 @@
                             </smartfilterbar:controlConfiguration>
                         </smartfilterbar:SmartFilterBar>
 
+                       <!--  <smarttable:SmartTable id="smartTable2" smartFilterId="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Icoorg,Nzvorg"> -->
                         <smarttable:SmartTable id="smartTable2" smartFilterId="smartFilterBar2" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj,Vrzsbj,Icoorg,Nzvorg">
                             <Table id="table2" selectionChange="onRowPress2" mode="SingleSelectMaster" growing="true" growingThreshold="20" />
                         </smarttable:SmartTable>
