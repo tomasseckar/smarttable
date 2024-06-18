@@ -14,9 +14,9 @@
                     <IconTabFilter id="tabFO" text="Fyzická osoba" >
                          <smartfilterbar:SmartFilterBar id="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" search="onGo1" enableBasicSearch="true" >
                              <smartfilterbar:controlConfiguration>
-<!--                                  <smartfilterbar:ControlConfiguration id="jmnosbFilter1" visibleInAdvancedArea="true" key="to_Subjos.Jmnosb"/>
+                                <smartfilterbar:ControlConfiguration id="jmnosbFilter1" visibleInAdvancedArea="true" key="to_Subjos.Jmnosb"/>
                                 <smartfilterbar:ControlConfiguration id="prjosbFilter1" visibleInAdvancedArea="true" key="to_Subjos.Prjosb"/>
-                                <smartfilterbar:ControlConfiguration id="idnsbjFilter1" visibleInAdvancedArea="true" key="Idnsbj"/> -->
+                                <smartfilterbar:ControlConfiguration id="idnsbjFilter1" visibleInAdvancedArea="true" key="Idnsbj"/>
                             </smartfilterbar:controlConfiguration>
                         </smartfilterbar:SmartFilterBar>
                          <smarttable:SmartTable id="smartTable1" smartFilterId="smartFilterBar1" entitySet="ZTS_SUBJEKT_MAIN" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnsbj2,Vrzsbj2,Jmnosb,Prjosb">
