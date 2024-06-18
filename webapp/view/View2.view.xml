@@ -7,72 +7,86 @@
     >
     <Page id="page2" title="{i18n>detailSubjektTitle}">
         <content>
-            <smartform:SmartForm id="smartFormBase">
-                <smartform:Group id="groupBase" title="">
-                    <smartform:GroupElement id="groupElementBase1">
-                        <smartfield:SmartField id="idnsbjField" textLabel="Id subjektu" value="{Idnsbj}"></smartfield:SmartField>
-                    </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElementBase2">
-                        <smartfield:SmartField id="vrzsbjField" textLabel="Verze subjektu" value="{Vrzsbj}"></smartfield:SmartField>
-                    </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElementBase3">
-                        <smartfield:SmartField id="jmnosbField" textLabel="Jméno" value="{Jmnosb}"></smartfield:SmartField>
-                    </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElementBase4">
-                        <smartfield:SmartField id="prjosbField" textLabel="Příjmení" value="{Prjosb}"></smartfield:SmartField>
-                    </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElementBase5">
-                        <smartfield:SmartField id="rdncslField" textLabel="Rodné číslo" value="{Rdncsl}"></smartfield:SmartField>
-                    </smartform:GroupElement>
-                    <smartform:GroupElement id="groupElementBase6">
-                        <smartfield:SmartField id="pscField" textLabel="PSČ" value="{Psc}"></smartfield:SmartField>
-                    </smartform:GroupElement>                                                    
-                </smartform:Group>
-            </smartform:SmartForm>
-
-            <IconTabBar id="iconTabBar1" select="tabSelected">
+            <IconTabBar id="tabGroup0">
                 <items>
-                    <IconTabFilter id="idTab1" text="Výplata dávek" >
-                        <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
-                            <smartfilterbar:controlConfiguration>
-                                <smartfilterbar:ControlConfiguration id="agneksFilter1" visibleInAdvancedArea="true" key="Agneks"/>
-                                <smartfilterbar:ControlConfiguration id="icoorgFilter1" key="to_Subjor.Icoorg" visible="false"/>
-                            </smartfilterbar:controlConfiguration>
-                        </smartfilterbar:SmartFilterBar>
+                    <IconTabFilter id="tabPrijemce" text="Příjemce">
+                        <smartform:SmartForm id="smartFormBase">
+                            <smartform:Group id="groupBase" title="">
+                                <smartform:GroupElement id="groupElementBase1">
+                                    <smartfield:SmartField id="idnsbjField" textLabel="Id subjektu" value="{Idnsbj}"></smartfield:SmartField>
+                                </smartform:GroupElement>
+                                <smartform:GroupElement id="groupElementBase2">
+                                    <smartfield:SmartField id="vrzsbjField" textLabel="Verze subjektu" value="{Vrzsbj}"></smartfield:SmartField>
+                                </smartform:GroupElement>
+                                <smartform:GroupElement id="groupElementBase3">
+                                    <smartfield:SmartField id="jmnosbField" textLabel="Jméno" value="{to_Subjos.Jmnosb}"></smartfield:SmartField>
+                                </smartform:GroupElement>
+                                <smartform:GroupElement id="groupElementBase4">
+                                    <smartfield:SmartField id="prjosbField" textLabel="Příjmení" value="{to_Subjos.Prjosb}"></smartfield:SmartField>
+                                </smartform:GroupElement>
+                                <smartform:GroupElement id="groupElementBase5">
+                                    <smartfield:SmartField id="rdncslField" textLabel="Rodné číslo" value="{Rdncsl}"></smartfield:SmartField>
+                                </smartform:GroupElement>
+                                <smartform:GroupElement id="groupElementBase6">
+                                    <smartfield:SmartField id="pscField" textLabel="PSČ" value="{Psc}"></smartfield:SmartField>
+                                </smartform:GroupElement>                                                    
+                            </smartform:Group>
+                        </smartform:SmartForm>
 
-                        <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
-                        </smarttable:SmartTable>
+                        <IconTabBar id="iconTabBar1" select="tabSelected">
+                            <items>
+                                <IconTabFilter id="idTab1" text="Výplata dávek" >
+                                    <smartfilterbar:SmartFilterBar id="smartFilterDetail1" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
+                                        <smartfilterbar:controlConfiguration>
+                                            <smartfilterbar:ControlConfiguration id="agneksFilter1" visibleInAdvancedArea="true" key="Agneks"/>
+                                            <smartfilterbar:ControlConfiguration id="icoorgFilter1" key="to_Subjor.Icoorg" visible="false"/>
+                                        </smartfilterbar:controlConfiguration>
+                                    </smartfilterbar:SmartFilterBar>
+
+                                    <smarttable:SmartTable id="smartTableDetail1" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnprj, Vrzprj, Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable1">
+                                    </smarttable:SmartTable>
+                                </IconTabFilter>
+
+                                <IconTabFilter id="idTab2" text="Jedn.odšk.">
+                                    <smartfilterbar:SmartFilterBar id="smartFilterDetail2" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
+                                        <smartfilterbar:controlConfiguration>
+                                            <smartfilterbar:ControlConfiguration id="agneksFilter2" visibleInAdvancedArea="true" key="Agneks"/>
+                                            <smartfilterbar:ControlConfiguration id="icoorgFilter2" key="to_Subjor.Icoorg" visible="false"/>
+                                        </smartfilterbar:controlConfiguration>
+                                    </smartfilterbar:SmartFilterBar>
+
+                                    <smarttable:SmartTable id="smartTableDetail2" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Idnadr,Vrzadr,Cisdvk" beforeRebindTable="onBeforeRebindTable2">
+                                    </smarttable:SmartTable>
+                                </IconTabFilter>
+
+                                <IconTabFilter id="idTab3" text="Výpl.exekucí">
+                                </IconTabFilter>
+
+                                <IconTabFilter id="idTab4" text="Vymáh.přepl.">
+                                </IconTabFilter>
+
+                                <IconTabFilter id="idTab5" text="Pož. na výplatu">
+                                </IconTabFilter>
+
+                                <IconTabFilter id="idTab6" text="Deponované v.">
+                                </IconTabFilter>
+
+                                <IconTabFilter id="idTab7" text="Refundace">
+                                </IconTabFilter>
+                        
+                            </items>
+                        </IconTabBar>
+                
                     </IconTabFilter>
 
-                    <IconTabFilter id="idTab2" text="Jedn.odšk.">
-                        <smartfilterbar:SmartFilterBar id="smartFilterDetail2" entitySet="ZTS_SUBJEKT_MAIN" search="onFilter1" useToolbar="true" liveMode="false" >
-                            <smartfilterbar:controlConfiguration>
-                                <smartfilterbar:ControlConfiguration id="agneksFilter2" visibleInAdvancedArea="true" key="Agneks"/>
-                                <smartfilterbar:ControlConfiguration id="icoorgFilter2" key="to_Subjor.Icoorg" visible="false"/>
-                            </smartfilterbar:controlConfiguration>
-                        </smartfilterbar:SmartFilterBar>
-
-                        <smarttable:SmartTable id="smartTableDetail2" entitySet="ZTS_SUBJEKT_MAIN" smartFilterId="smartFilterDetail1" enableAutoBinding="true" tableType="ResponsiveTable" initiallyVisibleFields="Agneks,Zpsplt,Dtmspl" beforeRebindTable="onBeforeRebindTable">
-                        </smarttable:SmartTable>
-                    </IconTabFilter>
-
-                    <IconTabFilter id="idTab3" text="Výpl.exekucí">
-                    </IconTabFilter>
-
-                    <IconTabFilter id="idTab4" text="Vymáh.přepl.">
-                    </IconTabFilter>
-
-                    <IconTabFilter id="idTab5" text="Pož. na výplatu">
-                    </IconTabFilter>
-
-                    <IconTabFilter id="idTab6" text="Deponované v.">
-                    </IconTabFilter>
-
-                    <IconTabFilter id="idTab7" text="Refundace">
-                    </IconTabFilter>
+                    <IconTabFilter id="tabAdresat" text="Adresát">
                     
+                    </IconTabFilter>
                 </items>
             </IconTabBar>
+
+
+            
 
         </content>
     </Page>

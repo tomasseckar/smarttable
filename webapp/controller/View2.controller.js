@@ -24,14 +24,24 @@ sap.ui.define([
             onFilter1: function() {
             },
 
-            onBeforeRebindTable: function(oSource) {
+            onBeforeRebindTable1: function(oSource) {
 
                 var binding = oSource.getParameter("bindingParams");
             
-                var oFilterIdn = new sap.ui.model.Filter("Idnprj", sap.ui.model.FilterOperator.EQ, this.Idnsbj);
+                var oFilterIdnprj = new sap.ui.model.Filter("Idnprj", sap.ui.model.FilterOperator.EQ, this.Idnsbj);
                 //var oFilterVrz = new sap.ui.model.Filter("Vrzprj", sap.ui.model.FilterOperator.EQ, this.Vrzsbj);
                 
-                binding.filters.push(oFilterIdn); // , oFilterVrz            
+                binding.filters.push(oFilterIdnprj); // , oFilterVrz            
+            } ,
+
+            onBeforeRebindTable2: function(oSource) {
+
+                var binding = oSource.getParameter("bindingParams");
+            
+                var oFilterIdnadr = new sap.ui.model.Filter("Idnadr", sap.ui.model.FilterOperator.EQ, this.Idnsbj);
+                //var oFilterVrz = new sap.ui.model.Filter("Vrzprj", sap.ui.model.FilterOperator.EQ, this.Vrzsbj);
+                
+                binding.filters.push(oFilterIdnadr); // , oFilterVrz            
             } ,
 
             onBeforeRendering: function() {
